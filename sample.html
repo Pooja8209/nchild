@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css">
+     -->
+     <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      .product {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    height: 300px;
+    max-width: 470px;
+    height: 100%;
+  
+}
+
+.product img {
+    max-width: 100%;
+    height: 400px;
+}
+
+.product-title {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product-description {
+    font-size: 1rem;
+    margin: 10px 0;
+    color: black;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #0074d9;
+    margin: 10px 0;
+}
+
+.order-button {
+    background-color: #0074d9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    /* display: inline; */
+}
+
+.order-button:hover {
+    background-color: #0056b3;
+}
+.container{
+  text-align: center;
+  padding-left: 20px;
+  height: 700px;
+}
+.first {
+        display: none;
+      }
+      .second {
+        display: flex;
+        /* margin: 0px 50px 0px 0px; */
+        padding: 16px;
+        justify-content: space-evenly;
+      }
+      p {
+        margin: 15px;
+        font-size: 16px;
+        color: red;
+      }
+
+      #arrow {
+        margin: 0px 40px 0px 0px;
+        /* width: 50px; */
+        height: 60px;
+        /* animation-name: slide;
+  animation-duration: 1s;
+  animation-direction: alternate; */
+  animation: slide 2s linear;
+
+
+
+}
+
+@keyframes slide{
+  to {
+    margin-left: 125%;
+  }
+  from{
+    margin-left: 0%;
+  }
+}
+#param{
+  text-transform: uppercase;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 8px;
+  margin-left: 80px;
+}
+.flex-cont{
+  display: flex;
+  justify-content: space-evenly;
+}
+.heading{
+  margin: 20px;
+  text-transform: capitalize;
+  font-weight: 900;
+  color: #0056b3;
+}
+.content{
+  visibility: hidden; /* Initially hide the product */
+    animation: fadeIn 1s 2s forwards; /* Delay the appearance of the product */
+}
+
+@keyframes fadeIn {
+    to {
+        visibility: visible;
+    }
+}
+
+     </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="heading">My Product Page</h1>
+   <div class="flex-cont">
+    <div class="product">
+      <img src="elegant-smartphone-composition.jpg" alt="Product Name">
+      <h2 class="product-title">Product Name</h2>
+      <p class="product-description">Product description goes here. Lorem ipsum dolor sit amet.</p>
+      <p class="product-price">$19.99</p>
+      <button class="order-button" onclick="clickme()">Order Now</button>
+      <div class="first" id="cont-box">
+        <!-- <button>click me</button> -->
+        <div style="margin-left: 80px;">
+          <img src="6208749.jpg" id="arrow" alt="arrow" />
+        </div>
+        <div class="content">
+          <p id="param">
+            hooray! your order placed successfully
+          </p>
+        </div>
+  </div>
+      </div>
+      
+
+   </div>
+  <script>
+    function clickme(){
+      let x = document.getElementById("cont-box");
+      let y= document.getElementById("cont-box1");
+    
+        x.classList.add("second");
+    }
+  </script>
+</body>
+</html>
